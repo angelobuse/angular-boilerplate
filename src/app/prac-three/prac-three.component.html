@@ -1,0 +1,8 @@
+<button class="btn btn-primary" (click)="toggleParagraph()">Display details</button>
+<br>
+<p *ngIf="showParagraph">Secret Password = Tuna</p>
+<div *ngFor="let item of logs; let i = index" 
+    [ngStyle]="{backgroundColor: i >= 5 ? 'blue' : 'transparent' }"
+    [ngClass]="{'white-text': i >=5 }">
+    <p>{{item}}</p>
+</div>

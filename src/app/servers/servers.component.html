@@ -1,0 +1,12 @@
+<label for="server name">Enter server name</label>
+<input type="text" name="" class="form-control" (input)="updateServerName($event)">
+<p [innerText]="serverName"></p>
+<hr>
+<label for="">Create another server</label>
+<input type="text" name="" id="" class="form-control" [(ngModel)]="serverName">
+<hr>
+<p [ngStyle]="{'backgroundColor': getColor()}">Server with ID {{ serverId }} is {{ getServerStatus() }}</p>
+<button class="btn btn-info" [disabled]="!allowNewServer" (click)="createServerStatus()">Add a new server</button>
+<p [innerText]="allowNewServer"></p>
+<strong>{{ serverCreationStatus }}</strong>
+<hr>
